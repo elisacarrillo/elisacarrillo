@@ -10,6 +10,7 @@ const Home = () => {
   }
   return (
     <div className='home'>
+      <Sparkle/>
     
       <TypeAnimation
       sequence={[
@@ -32,7 +33,7 @@ const Home = () => {
       style={{ fontSize: '10em', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
     />
     <div className = 'imagez'>
-      <Sparkle/>
+      
       <img className = 'inner' src={homephoto} alt='logo' />
     </div>
     
