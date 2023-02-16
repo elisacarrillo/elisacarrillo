@@ -1,6 +1,5 @@
 {
   "hosting": {
-    "site": "elisacarrillo",
     "public": "public",
     "ignore": [
       "firebase.json",
