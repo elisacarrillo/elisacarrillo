@@ -5,13 +5,23 @@ import Sparkle from 'react-sparkle'
 import homephoto from '../coolphoto.png'
 
 const Home = () => {
+  function goToProjects() {
+    window.location.href = "/projects";
+  }
+  function goToResume() {
+    window.location.href = "/resume";
+  }
+  function goToContact() {
+    window.location.href = "/contact";
+  }
+  
   function goToBlog() {
     window.location.href = "/blog";
   }
   return (
     <div className='home'>
       <Sparkle/>
-    
+      <div className='title'>
       <TypeAnimation
       sequence={[
         1000,
@@ -30,8 +40,9 @@ const Home = () => {
       wrapper="div"
       cursor={false}
     //   repeat={Infinity}
-      style={{ fontSize: '10em', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
+      style={{ fontSize: '10vw', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
     />
+    </div>
     <div className = 'imagez'>
       
       <img className = 'inner' src={homephoto} alt='logo' />
@@ -40,9 +51,9 @@ const Home = () => {
     <div className='container'>
       <div class='row'>
         <div class='col-sm' onClick={goToBlog}>Blog</div>
-        <div class='col-sm'>Projects</div>
-        <div class = 'col-sm'>Resume</div>
-        <div class='col-sm'>Contact Me</div>
+        <div class='col-sm' onClick={goToProjects}>Projects</div>
+        <div class = 'col-sm' onClick={goToResume}>Resume</div>
+        <div class='col-sm' onClick = {goToContact}>Contact Me</div>
       </div>
     </div>
     </div>

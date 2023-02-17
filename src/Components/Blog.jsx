@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 import { fs } from "../base.js";
+import Footer from './Footer';
 
 
 const Blog = () => {
@@ -28,26 +29,27 @@ const Blog = () => {
     }
 
     return (
-        <div className='blog'>
+        <><div className='blog'>
             <br></br>
             <h1 className='h1New'>Blog</h1>
             {/* <br></br> */}
-            {info.map(function(item, idx) {
+            {info.map(function (item, idx) {
                 return (
-                    <div className='card' onClick={()=>goToCard(item.title)}>
+                    <div className='card' onClick={() => goToCard(item.id)}>
                         {/* <h2 >Title </h2> */}
                         <h2> {item.title}</h2>
-                        <p >{item.date}</p>
-                        <p >{item.content}</p>
+                        <p>{item.date}</p>
+                        <p>{item.content}</p>
 
-                       
+
                     </div>
-                )
+                );
             })}
-        
 
-        {/* <h1>Blog</h1> */}
-        </div>
+
+            {/* <h1>Blog</h1> */}
+
+        </div><Footer /></>
     )
 };
 export default Blog;

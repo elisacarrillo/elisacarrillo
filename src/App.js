@@ -9,6 +9,7 @@ import { BrowserRouter as Router, Routes, Route}
 import Home from './Components/Home';
 import Blog from './Components/Blog';
 import Post from './Components/Post'
+import Resume from './Components/Resume';
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
       <Routes>
           <Route exact path='/' exact element={<Home />} />
           <Route path='/blog' element = {<Blog />}/>
-          <Route path='/blog/:title' element = {<Post />}/>
+          <Route path='/blog/:id' element = {<Post />}/>
+          <Route path='/resume' element={<Resume/>} />
           {/* <Route path='/about' element={<About/>} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='/blogs' element={<Blogs/>} />
