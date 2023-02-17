@@ -8,6 +8,7 @@ import { BrowserRouter as Router, Routes, Route}
     from 'react-router-dom';
 import Home from './Components/Home';
 import Blog from './Components/Blog';
+import Post from './Components/Post'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Routes>
           <Route exact path='/' exact element={<Home />} />
           <Route path='/blog' element = {<Blog />}/>
+          <Route path='/blog/:title' element = {<Post />}/>
           {/* <Route path='/about' element={<About/>} />
           <Route path='/contact' element={<Contact/>} />
           <Route path='/blogs' element={<Blogs/>} />
