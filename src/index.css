@@ -83,16 +83,16 @@ code {
 }
 
 .card {
-  outline: 1px solid black;
+  outline: 2px solid rgb(77, 18, 62);
   padding: 2%;
   background-color: rgba(81, 20, 30, 0.203)   ;
-  width: 70%;
+  width: 80%;
   /* margin-right: 20%; */
   margin: auto;
   /* margin-right: 20vw; */
   /* text-align: left; */
   /* text-align: center; */
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 2px 2px 2px rgba(79, 21, 74, 0.2);
   /* padding-top: 5vw; */
   /* margin-top: 2%; */
   margin-bottom: 2%;
@@ -103,7 +103,7 @@ code {
 .blog {
   background-color: pink;
   /* height: 100vw; */
-  min-height: 97.5vh; 
+  min-height: 90vh; 
   /* font-family: 'Myfont'; */
 }
 .h1New {
@@ -156,6 +156,7 @@ ul {
   margin-bottom: 1vh; */
   /* text-align: center; */
   /* font-family: 'Myfont'; */
+  white-space: pre-wrap
 }
 
 @media screen and (max-width: 600px) {
@@ -209,7 +210,144 @@ ul {
 .resuma {
   margin-left: 1vw;
   margin-right: 1vw;
-  min-height: 95vh;
+  max-height: 90vh;
   /* min-height: ; */
 
+}
+
+.title2 {
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+    blinkTextCursor 500ms infinite;
+    position: relative;
+    color: hsl(0, 0%, 68%);
+    font-weight: bold!important;
+    font-family: "Anonymous Pro", monospace!important;
+    letter-spacing: 7px!important;
+    overflow: hidden;
+    border-right: 2px solid hsl(0, 0%, 80%);
+    white-space: nowrap;
+    white-space: pre-wrap
+}
+
+.card {
+  /* width: 20vw; */
+}
+.projects {
+  min-height: 90vh;
+  min-width: 100vw;
+  /* margin-left: 2vw; */
+  /* margin-right: 2vw; */
+  /* padding-right  : 2vw; */
+  margin-top: -1.5vw;
+  display: inline-block;
+  /* padding-top: -2vw; */
+} 
+
+.col2 {
+  /* margin-left: 1vw; */
+  /* width: 70%; */
+  /* padding: 0px -7.5px; */
+  /* display: block-inline; */
+  width: 80vw;
+  /* height: 10vh; */
+  /* margin-left: 2vw; */
+  margin-right: 2vw;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  margin: auto;
+  
+  /* display: inline-block; */
+  
+
+  
+}
+.card2 {
+  /* margin-right: -10vw; */
+  /* width: 20vw; */
+/* height: 2px; */
+  /* max-height: 2vh; */
+  min-height: 15vh;
+  outline: 2px solid rgb(77, 18, 62);
+  margin-bottom: 3vh;
+  margin-top: 3vh;
+  margin: auto;
+  /* margin-block-end: 20vh; */
+  /* display: flex; */
+  
+  margin: 2vw;
+  min-width: 70vw;
+
+  
+  /* min-width: 30vw; */
+  
+  /* margin-block-start: 5vh; */
+  /* padding: 5vw; */
+}
+.card-body {
+  display: flex;
+}
+.row2 {
+  /* float: left; */
+  /* text-align: left; */
+  /* margin-left: -10vw; */
+  /* display:block-inline; */
+  /* height: 5vh; */
+  /* display: flex;
+  
+  flex-direction: row; 
+  justify-content: flex-end; */
+  /* display: flexbox; */
+  min-height: 40%;
+  padding: -2vw;
+  margin: auto;
+  margin-bottom: 3vh;
+  
+  
+
+}
+.footer {
+  padding-top: 7vh;
+  min-height: 10vh;
+}
+.btn {
+  margin-right: 2vw;
+  /* margin-bottom: 0200vh; */
+  color: rgb(172, 56, 147);
+  border: 3px solid rgb(172, 56, 147);
+  max-height:4vh;
+  /* box-shadow:3p rgb(172, 56, 147);; */
+  /* background-color: pink; */
+}
+.btn2 {
+  
+}
+.rightside {
+  /* flex-basis:  */
+  float: right;
+  text-align: right;
+  margin-top: 2vw;
+  flex-basis:30%;
+  /* margin-bottom: 2vw; */
+  
+  /* margin-left: 2vw; */
+}
+.leftside {
+  flex-basis: 80%;
+  white-space: pre-wrap
+  /* margin-right: 2vw; */
+}
+.a {
+  /* margin-left: 2vw; */
+  /* margin-right: 2vw; */
+  margin-top: 2vw;
+ 
+}
+.btn.btn-light {
+  color: rgb(172, 56, 147);
+  background-color: rgba(239, 195, 226, 0.337);
+  border: 3px solid rgb(172, 56, 147);
+  max-height:4vh;
+  margin-bottom: 2vh;
+  /* box-shadow:3p rgb(172, 56, 147);; */
+  /* background-color: pink; */
 }

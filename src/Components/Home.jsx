@@ -25,9 +25,8 @@ const Home = () => {
       <TypeAnimation
       sequence={[
         1000,
-        '\0Hello Earth Creatures', // Types 'One'
-        2000, // Waits 1s
-        '\0My name is Elisa Carrillo', // Deletes 'One' and types 'Two'
+        '\0Hello Earth Creatures \n My name is Elisa Carrillo' , // Types 'One'
+         // Deletes 'One' and types 'Two'
         // 10000,
         2000,
         
@@ -40,9 +39,12 @@ const Home = () => {
       wrapper="div"
       cursor={false}
     //   repeat={Infinity}
-      style={{ fontSize: '10vw', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
+      style={{ fontSize: '7vw', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
     />
     </div>
+    {/* <div className='title2'>
+      <p className='title2'>Hello Earthlings! My name is Elisa Carrillo</p>
+    </div> */}
     <div className = 'imagez'>
       
       <img className = 'inner' src={homephoto} alt='logo' />

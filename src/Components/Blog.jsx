@@ -35,7 +35,7 @@ const Blog = () => {
             {/* <br></br> */}
             {info.map(function (item, idx) {
                 return (
-                    <div className='card' onClick={() => goToCard(item.id)}>
+                    <div className='card' >
                         {/* <h2 >Title </h2> */}
                         <h2> {item.title}</h2>
                         <p>{item.date}</p>
