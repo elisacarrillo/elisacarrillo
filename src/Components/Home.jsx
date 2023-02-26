@@ -4,6 +4,7 @@ import React from 'react'
 import Sparkle from 'react-sparkle'
 import homephoto from '../coolphoto.png'
 import { Link } from 'react-router-dom';
+import { useRef } from 'react';
 
 
 const Home = () => {
@@ -20,12 +21,21 @@ const Home = () => {
   function goToBlog() {
     window.location.href = "/blog";
   }
+  const myRef = useRef(null);
+  function executeScroll() {
+    myRef.current.scrollIntoView()
+  } 
+  function scroll() {
+    executeScroll();
+  }
   return (
     <div className='home'>
       <Sparkle/>
       {/* <br></br> */}
+      
+      
       <div className='title'>
-        <div className='tit'>
+        <div className='tit' onClick={scroll}>
         <svg  viewBox="0 0 600 600">
           <path id="curve" d="M100,300 C234,325 389,327 500,300" />
           {/* <div className='toTransform'> */}
@@ -38,8 +48,41 @@ const Home = () => {
           </text>
           {/* </div> */}
         </svg>
+        {/* <h1 className = "hTitNew">Hi Im Elisa</h1> */}
+        <div className='toType' ref={myRef}>
+        <TypeAnimation
+      sequence={[
+        2000,
+        '\0Beep' , // Types 'One'
+        1000,
+        '\0Boop' , // Types 'One'
+        1000,
+        '\0Beep Boop',
+        1000,
+        '\0 Welcome to my page' ,
+        1000,
+        '\0 My name is Elisa Carrillo' , // Types 'One'
+        
+         // Deletes 'One' and types 'Two'
+         4000,
+         '\0 Click The Links Below To Explore',
+        // 10000,
+        2000,
+        
+        
+
+        () => {
+          console.log('Done typing!'); // Place optional callbacks anywhere in the array
+        }
+      ]}
+      wrapper="div"
+      cursor={false}
+    //   repeat={Infinity}
+      style={{ fontSize: '7vw', cursor: false , fontFamily: 'Myfont', color: '#642454', textShadow: '2px 2px 5px#af4092'}}
+    /> 
         </div>
-        <h1 className = "hTitNew">Discover The Queenellie Universe</h1>
+        </div>
+        
       {/* <TypeAnimation
       sequence={[
         1000,
@@ -60,15 +103,16 @@ const Home = () => {
       style={{ fontSize: '7vw', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
     /> */}
     </div>
+    
     {/* <div className='title2'>
       <p className='title2'>Hello Earthlings! My name is Elisa Carrillo</p>
     </div> */}
-    <div className = 'imagez'>
+    {/* <div className = 'imagez'> */}
       {/* <br></br> */}
       {/* <img className = 'inner' src={homephoto} alt='logo' /> */}
       
       {/* <img className = 'inner' src={"https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"} alt='logo' /> */}
-    </div>
+    {/* </div> */}
     
     <div className='container'>
       <div class='row'>

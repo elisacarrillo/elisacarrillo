@@ -1,4 +1,22 @@
-body {
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  margin-bottom: 0;
+  background-color: black;
+  padding: 0;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* background-color: rgb(23, 22, 23); */ 
+  /* border-style: dotted; */
+   /* border-color: rgb(250, 107, 207); */
+  /* border-width: 10px;  */
+  /* padding: 2vw; */
+}
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,8 +28,7 @@ body {
    /* border-color: rgb(250, 107, 207); */
   /* border-width: 10px;  */
   /* padding: 2vw; */
-}
-
+/* } */ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -35,6 +52,7 @@ code {
   background-position: -10vw;
   background-position-y: -63vh;
   background-color: black;
+  
   /* background-position-x: -10vw; */
   /* transform:translate(0, -10); */
 
@@ -56,6 +74,9 @@ code {
   display: inline-block;
   align-items: center;
   text-align: center;
+  min-height: 10vh;
+  margin-bottom: 10vh;
+
   /* background-image: url("https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"); */
   /* background-size: 100%, 100vh; */
   /* margin-left: 200vw; */
@@ -72,6 +93,9 @@ code {
 }
 /* .row {
   /* margin-left: 20vw; */
+.toType {
+  white-space: pre-wrap
+}
 path {
   fill: transparent;
   /* text-align: center; */
@@ -85,7 +109,7 @@ path {
   justify-content: center;
   text-align: center;
   /* margin-left: 25vw; */
-  margin-bottom: 6vh;
+  /* margin-bottom: 6vh; */
 
 }
 .inner {
@@ -172,7 +196,7 @@ path {
   .inner {
     width: 40%;
     height: 40%;
-    margin-top: 9.5vh;
+    /* margin-top: 9. 5vh; */
     /* transform: translate(0, -10vh); */
     /* make bigger */
     
@@ -234,6 +258,7 @@ ul {
   /* font-family: 'Myfont'; */
   /* white-space: pre-wrap; */
   /* margin-top: -10vh; */
+  margin-bottom: -10vh;
 }
 
 @media screen and (max-width: 600px) {
