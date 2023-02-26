@@ -120,7 +120,7 @@ path {
 }
 .tit {
   text-align: center;
-  font-size:3.7vw;
+  font-size:3.5vw;
   text-shadow: 3px 3px 3px rgba(234, 216, 232, 0.2);
   font-family: 'Myfont';
   transform: translate(2vw, -30vh);
@@ -181,8 +181,23 @@ path {
   text-align: center;
   font-family: 'Myfont';
   margin-top: 0vh;
-}
 
+}
+@media screen and (max-width: 1600px) {
+  .tit {
+    font-size: 5.5vw;
+    transform: translate(2vw, -30vh);
+  }
+  
+  
+}
+@media screen and (max-width: 1400px) {
+  .tit {
+    font-size: 5.5vw;
+    transform: translate(2vw, -30vh);
+  }
+  
+}
 @media screen and (max-width: 1200px) {
   .h1New {
     font-size: 9vw;
@@ -202,12 +217,21 @@ path {
     
 
   }
+  .home {
+    background-size: 120vw;
+    background-position: -10vw;
+    background-position-y: 3vh;
+  }
   @font-face {
     font-family: 'Myfont';
     font-size: 2vw;
     background-position: 2vw;
     src: url(../chocolate-dealer-font/ChocolatedealerBold-534x.otf);
 
+  }
+  .tit {
+    font-size: 7vw;
+    transform: translate(0, -30vh);
   }
 
 }

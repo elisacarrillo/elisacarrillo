@@ -78,7 +78,7 @@ const Home = () => {
       wrapper="div"
       cursor={false}
     //   repeat={Infinity}
-      style={{ fontSize: '7vw', cursor: false , fontFamily: 'Myfont', color: '#642454', textShadow: '2px 2px 5px#af4092'}}
+      style={{ fontSize: '7vw', cursor: false , fontFamily: 'Myfont', color: '#4c0c35', textShadow: '2px 2px 5px #fe53c5'}}
     /> 
         </div>
         </div>
