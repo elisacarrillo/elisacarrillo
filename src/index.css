@@ -21,14 +21,22 @@ code {
   font-family: 'Myfont';
   src: url(../chocolate-dealer-font/ChocolatedealerBold-534x.otf);
   background-color: pink;
+  /* background-image: src("https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"); */
 }
 
 .home {
   margin: auto;
   text-align: center;
   /* margin-left: 11vw; */
-  background-color: pink;
-  height: 100vh;
+  /* background-color: pink; */
+  min-height: 100vh;
+  background-image: url("https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif");
+  background-size: 120vw;
+  background-position: -10vw;
+  background-position-y: -63vh;
+  background-color: black;
+  /* background-position-x: -10vw; */
+  /* transform:translate(0, -10); */
 
 
 }
@@ -48,6 +56,8 @@ code {
   display: inline-block;
   align-items: center;
   text-align: center;
+  /* background-image: url("https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"); */
+  /* background-size: 100%, 100vh; */
   /* margin-left: 200vw; */
   /* float: right; */
   /* justify-content: center; */
@@ -62,7 +72,10 @@ code {
 }
 /* .row {
   /* margin-left: 20vw; */
-
+path {
+  fill: transparent;
+  /* text-align: center; */
+}
 .imagez {
   /* border-radius: black solid 50%; */
   /* border: black solid 1px; */
@@ -77,11 +90,27 @@ code {
 }
 .inner {
   border-radius: 50%;
-  width: 20vw;
-  height: 20vw;
+  width: 25vw;
+  height: 25vw;
   border: rgb(81, 28, 83) solid 2px;
 }
+.tit {
+  text-align: center;
+  font-size:3.7vw;
+  text-shadow: 3px 3px 3px rgba(234, 216, 232, 0.2);
+  font-family: 'Myfont';
+  transform: translate(2vw, -30vh);
+  /* margin-top: -5vh; */
 
+}
+.hTitNew {
+  font-size: 5vw;
+  /* margin-top: 5vh;
+  margin-bottom: 5vh; */
+  text-align: center;
+  font-family: 'Myfont';
+  /* margin-top: 10vh; */
+}
 .card {
   outline: 2px solid rgb(77, 18, 62);
   padding: 2%;
@@ -113,6 +142,53 @@ code {
   text-align: center;
   font-family: 'Myfont';
 }
+.h2New {
+  font-size: 8vw;
+  /* margin-top: 5vh;
+  margin-bottom: 5vh; */
+  text-align: center;
+  font-family: 'Myfont';
+}
+.h3New {
+  font-size: 7vw;
+  /* margin-top: 5vh;
+  margin-b
+  ottom: 5vh; */
+  text-align: center;
+  font-family: 'Myfont';
+  margin-top: 0vh;
+}
+
+@media screen and (max-width: 1200px) {
+  .h1New {
+    font-size: 9vw;
+  }
+  .h2New {
+    font-size: 12vw;
+  }
+  .h3New {
+    font-size: 14vw;
+  }
+  .inner {
+    width: 40%;
+    height: 40%;
+    margin-top: 9.5vh;
+    /* transform: translate(0, -10vh); */
+    /* make bigger */
+    
+
+  }
+  @font-face {
+    font-family: 'Myfont';
+    font-size: 2vw;
+    background-position: 2vw;
+    src: url(../chocolate-dealer-font/ChocolatedealerBold-534x.otf);
+
+  }
+
+}
+  
+
 ul {
   margin-top: 0;
 }
@@ -156,7 +232,8 @@ ul {
   margin-bottom: 1vh; */
   /* text-align: center; */
   /* font-family: 'Myfont'; */
-  white-space: pre-wrap
+  /* white-space: pre-wrap; */
+  /* margin-top: -10vh; */
 }
 
 @media screen and (max-width: 600px) {

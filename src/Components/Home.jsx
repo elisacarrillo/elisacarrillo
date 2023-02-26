@@ -3,6 +3,8 @@ import '../index.css';
 import React from 'react'
 import Sparkle from 'react-sparkle'
 import homephoto from '../coolphoto.png'
+import { Link } from 'react-router-dom';
+
 
 const Home = () => {
   function goToProjects() {
@@ -21,8 +23,24 @@ const Home = () => {
   return (
     <div className='home'>
       <Sparkle/>
+      {/* <br></br> */}
       <div className='title'>
-      <TypeAnimation
+        <div className='tit'>
+        <svg  viewBox="0 0 600 600">
+          <path id="curve" d="M100,300 C234,325 389,327 500,300" />
+          {/* <div className='toTransform'> */}
+          <text width="600">
+            
+            <textPath href="#curve">
+            The Queenellie Orbit
+            </textPath>
+            
+          </text>
+          {/* </div> */}
+        </svg>
+        </div>
+        <h1 className = "hTitNew">Discover The Queenellie Universe</h1>
+      {/* <TypeAnimation
       sequence={[
         1000,
         '\0Hello Earth Creatures \n My name is Elisa Carrillo' , // Types 'One'
@@ -40,14 +58,16 @@ const Home = () => {
       cursor={false}
     //   repeat={Infinity}
       style={{ fontSize: '7vw', cursor: false , fontFamily: 'Myfont', color: 'dark pink'}}
-    />
+    /> */}
     </div>
     {/* <div className='title2'>
       <p className='title2'>Hello Earthlings! My name is Elisa Carrillo</p>
     </div> */}
     <div className = 'imagez'>
+      {/* <br></br> */}
+      {/* <img className = 'inner' src={homephoto} alt='logo' /> */}
       
-      <img className = 'inner' src={homephoto} alt='logo' />
+      {/* <img className = 'inner' src={"https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"} alt='logo' /> */}
     </div>
     
     <div className='container'>
