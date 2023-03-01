@@ -1,15 +1,114 @@
+import * as THREE from 'three'
+import ReactDOM from 'react-dom'
+import React from "react";
+import { render } from "react-dom";
+import { Canvas } from "react-three-fiber";
+
+import { Shadow, OrthographicCamera, OrbitControls, Html } from '@react-three/drei'
+import { Text } from '@react-three/drei'
+
+
+
+
+
+
+//
 import { TypeAnimation } from 'react-type-animation';
 import '../index.css';
-import React from 'react'
+// import React from 'react'
+// import Heart from "react-heart";
 import Sparkle from 'react-sparkle'
-import homephoto from '../coolphoto.png'
 import { Link } from 'react-router-dom';
-import { useRef } from 'react';
+// import { useRef } from 'react';
+import { useState } from 'react';
 
 
+// import MyFont from "../index.css";
+// import "react-dat-gu÷÷i/build/react-dat-gui.css";
+
+
+// https://sean.brunnock.com/SVG/SVGPathGenerator/
+// https://codesandbox.io/embed/troika-3d-text-via-react-three-fiber-ntfx2?fontsize=14
+// https://sean.brunnock.com/SVG/SVGPathGenerator/
+// https://codesandbox.io/embed/troika-3d-text-via-react-three-fiber-ntfx2?fontsize=14
+function SphereBlog({ children }) {
+
+  return (
+    <mesh>
+      
+      <sphereBufferGeometry args={[5, 24, 24]} />
+      <meshStandardMaterial color={"rgba(255, 9, 185, 0.971)"} />
+      <Html distanceFactor={10} scaleFactor={10}>
+        <div className="cont">
+          <div className="text3">{"Blog"}</div>
+        </div>
+        
+      </Html>
+    </mesh>
+  )
+}
+function SphereProjects({ children }) {
+
+  return (
+    <mesh>
+      
+      <sphereBufferGeometry args={[5, 24, 24]} />
+      <meshStandardMaterial color={"rgba(255, 9, 185, 0.971)"} />
+      <Html distanceFactor={10} scaleFactor={10}>
+        <div className="cont">
+          <div className="text2">{"Projects"}</div>
+        </div>
+      </Html>
+    </mesh>
+  )
+}
+function SphereContactMe({ children }) {
+
+  return (
+    <mesh>
+      
+      <sphereBufferGeometry args={[5, 24, 24]} />
+      <meshStandardMaterial color={"rgba(255, 9, 185, 0.971)"} />
+      <Html distanceFactor={10} scaleFactor={10}>
+        <div className="cont">
+          <div className="text2">{"Contact"}</div>
+        </div>
+      </Html>
+    </mesh>
+  )
+}
+function SphereResume({ children }) {
+
+  return (
+    <mesh>
+      
+      <sphereBufferGeometry args={[5, 24, 24]} />
+      <meshStandardMaterial color={"rgba(255, 9, 185, 0.971)"} />
+      <Html distanceFactor={10} scaleFactor={10}>
+        <div className="cont">
+          <div className="text2">{"Resume"}</div>
+        </div>
+      </Html>
+    </mesh>
+  )
+}
 const Home = () => {
+  const [active, setActive] = useState(false);
+  const [rotation,setRotation] = useState([0, 0, 0, 0]);
+  const [opts, setOpts] = useState({
+    fontSize: 12,
+    color: "#99ccff",
+    maxWidth: 300,
+    lineHeight: 1,
+    letterSpacing: 0,
+    textAlign: "justify",
+    materialType: "MeshPhongMaterial"
+  });
   function goToProjects() {
     window.location.href = "/projects";
+  }
+  function animateHeart() {
+    setActive(!active);
   }
   function goToResume() {
     window.location.href = "/resume";
@@ -21,35 +120,41 @@ const Home = () => {
   function goToBlog() {
     window.location.href = "/blog";
   }
-  const myRef = useRef(null);
-  function executeScroll() {
-    myRef.current.scrollIntoView()
-  } 
   function scroll() {
-    executeScroll();
+    window.scrollTo(0, 1100);
   }
+
+  const onMouseMove = e => {
+    setRotation([
+      ((e.clientY / e.target.offsetHeight - 0.5) * -Math.PI) / 8,
+      ((e.clientX / e.target.offsetWidth - 0.5) * -Math.PI) / 8,
+      0
+    ]);
+  };
   return (
     <div className='home'>
       <Sparkle/>
       {/* <br></br> */}
-      
+      {/* 3d component */}
+ 
       
       <div className='title'>
-        <div className='tit' onClick={scroll}>
+        <div className='tit' onClick={scroll} >
+          {/* <h1 className='h1New'>./The Queenellie Orbit</h1> */}
         <svg  viewBox="0 0 600 600">
-          <path id="curve" d="M100,300 C234,325 389,327 500,300" />
+          <path id="curve" d="M100,300 C195,339 375,340 500,300" />
           {/* <div className='toTransform'> */}
           <text width="600">
             
             <textPath href="#curve">
-            The Queenellie Orbit
+             The Queenellie Orbit 
             </textPath>
             
           </text>
           {/* </div> */}
         </svg>
         {/* <h1 className = "hTitNew">Hi Im Elisa</h1> */}
-        <div className='toType' ref={myRef}>
+        <div className='toType' >
         <TypeAnimation
       sequence={[
         2000,
@@ -65,7 +170,7 @@ const Home = () => {
         
          // Deletes 'One' and types 'Two'
          4000,
-         '\0 Click The Links Below To Explore',
+         '\0 Click The Worlds Below To Explore',
         // 10000,
         2000,
         
@@ -113,14 +218,81 @@ const Home = () => {
       
       {/* <img className = 'inner' src={"https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"} alt='logo' /> */}
     {/* </div> */}
-    
-    <div className='container'>
-      <div class='row'>
-        <div class='col-sm' onClick={goToBlog}>Blog</div>
-        <div class='col-sm' onClick={goToProjects}>Projects</div>
-        <div class = 'col-sm' onClick={goToResume}>Resume</div>
-        <div class='col-sm' onClick = {goToContact}>Contact Me</div>
+    <div className='total'>
+    {/* <div className='yo'> */}
+    {/* <Heart className = "heart" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} />
+        <Heart className="heart" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} />
+        <Heart className = "heart" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} />
+        <Heart className="heart" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} /> */}
+
+    {/* </div> */}
+    <div className="row3">
+          <div className="sphere" onClick={goToBlog}>
+          <Canvas
+            style={{ height: 500, width: 500 }}
+            camera={{ position: [0, 15, 15] }}
+            text = "Hello"
+            
+          >
+
+            <pointLight position={[0, 10, 10]} />
+            <SphereBlog />
+          </Canvas>
+          </div>
+          <div className="sphere" onClick={goToProjects}>
+          
+          <Canvas
+          style={{ height: 500, width: 500 }}
+          camera={{ position: [0, 15, 15] }}
+          text = "Hello"
+          
+        >
+          <pointLight position={[0, 10, 10]} />
+          <SphereProjects />
+        </Canvas>
+        </div>
+        <div className='sphere' onClick={goToContact}>
+        <Canvas
+        style={{ height: 500, width: 500 }}
+        camera={{ position: [0, 15, 15] }}
+        text = "Hello"
+      >
+        <pointLight position={[0, 10, 10]} />
+        <SphereContactMe />
+      </Canvas>
       </div>
+      <div className='sphere' onClick={goToResume}>
+      <Canvas
+            style={{ height: 500, width: 500 }}
+            camera={{ position: [0, 15, 15] }}
+            text = "Hello"
+          >
+            <pointLight position={[0, 10, 10]} />
+            <SphereResume />
+          </Canvas>
+          </div>
+          </div>
+
+        {/* <div style={{ width: "12vw" }}> */}
+        
+        {/* </div> */}
+        
+        
+      
+        {/* <div class='col-sm' onClick={goToBlog} > */}
+          {/* Blog</div> */}
+        {/* <div onClick={goToBlog} >Blog</div> */}
+        {/* <div class='col-sm' onClick={goToProjects} onTouchStart={animateHeart}>Projects</div>
+        <div class = 'col-sm' onClick={goToResume}>Resume</div>
+        <div class='col-sm' onClick = {goToContact}>Contact Me</div> */}
+        
+   
+    {/* <div className='right'> */}
+    {/* <Heart className = "heart2" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} />
+        <Heart className="heart2" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} />
+        <Heart className = "heart2" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} />
+        <Heart className="heart2" isActive={active} onClick={() => setActive(!active)} activeColor = "green" inactiveColor = "rgba(255, 9, 185, 0.971)" animationTrigger = "hover" animationScale = {1.5} /> */}
+        {/* </div> */}
     </div>
     </div>
   )

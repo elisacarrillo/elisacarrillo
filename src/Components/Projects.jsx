@@ -4,7 +4,7 @@ import '../index.css';
 const Projects = () => {
     return (<>
         <div className='projects'>
-            <h1 className='h1New'>Projects</h1>
+            <h1 className='h4New'>Projects</h1>
             {/* <div class="card">
                 <img src="..." class="card-img-top" alt="..."/>
                 <div class="card-body">
@@ -38,7 +38,7 @@ const Projects = () => {
                          <div className='rightside'>
                                 <a href="https://github.com/elisacarrillo/Oracle-of-Artists"  class="btn btn-light" >Github Link</a>
                                 {/* <br></br> */}
-                                <a href="https://github.com/elisacarrillo/Oracle-of-Artists" class="btn btn-light">Inside the project</a>
+                                <a href="/oracle-of-artists" class="btn btn-light">Inside the project</a>
                         </div>
                     </div>
                     </div>
@@ -92,7 +92,7 @@ const Projects = () => {
                 </div>
                 </div>
         </div>
-        <Footer /></>
+       </>
 
     )
 }

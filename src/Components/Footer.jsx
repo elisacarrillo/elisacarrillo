@@ -1,3 +1,4 @@
+import React from 'react';
 const footer = () => {
     const goHome = () => {
         window.location.href = "/";
@@ -15,7 +16,7 @@ const footer = () => {
     const goToContact = () => {
         window.location.href = "/contact";
     }
-    
+    // TODO make footer have worlds
     return (
 
         <footer>

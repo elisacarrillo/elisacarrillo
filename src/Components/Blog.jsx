@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 import { fs } from "../base.js";
 import Footer from './Footer';
+import React from 'react';
 
 
 const Blog = () => {
@@ -31,7 +32,7 @@ const Blog = () => {
     return (
         <><div className='blog'>
             <br></br>
-            <h1 className='h1New'>Blog</h1>
+            <h1 className='h4New'>Blog</h1>
             {/* <br></br> */}
             {info.map(function (item, idx) {
                 return (
@@ -49,7 +50,7 @@ const Blog = () => {
 
             {/* <h1>Blog</h1> */}
 
-        </div><Footer /></>
+        </div></>
     )
 };
 export default Blog;
