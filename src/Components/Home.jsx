@@ -240,7 +240,7 @@ const Home = () => {
             
           >
 
-            <pointLight position={[0, 10, 10]} />
+            <pointLight position={[0, 20, 10]} />
             <SphereBlog />
           </Canvas>
           </div>
@@ -252,7 +252,7 @@ const Home = () => {
           text = "Hello"
           
         >
-          <pointLight position={[0, 10, 10]} />
+          <pointLight position={[0, 20, 10]} />
           <SphereProjects />
         </Canvas>
         </div>
@@ -262,7 +262,7 @@ const Home = () => {
         camera={{ position: [0, 15, 15] }}
         text = "Hello"
       >
-        <pointLight position={[0, 10, 10]} />
+        <pointLight position={[0, 20, 10]} />
         <SphereContactMe />
       </Canvas>
       </div>
@@ -273,7 +273,7 @@ const Home = () => {
             text = "Hello"
             
           >
-            <pointLight position={[0, 10, 10]} />
+            <pointLight position={[0, 20, 10]} />
             <SphereResume />
           </Canvas>
           </div>

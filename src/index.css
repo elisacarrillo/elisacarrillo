@@ -3,7 +3,7 @@ html, body {
   width: 100vw;
   margin: 0;
   margin-bottom: 0;
-  background-color: black;
+  background-color: rgb(255, 0, 187);
   padding: 0;
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -40,7 +40,7 @@ code {
 @font-face {
   font-family: 'Myfont';
   src: url(./chocolate-dealer-font/ChocolatedealerBold-534x.otf);
-  background-color: pink;
+  background-color: rgb(255, 0, 123);
   /* background-image: src("https://media1.giphy.com/media/xvZOuJeLij0W9IwCdH/giphy.gif"); */
 }
 .text2 {
@@ -71,7 +71,7 @@ code {
   background-size: 120vw;
   background-position: -11vw;
   background-position-y: -70vh;
-  background-color: black;
+  background-color: rgb(255, 3, 205);
   
   /* background-position-x: -10vw; */
   /* transform:translate(0, -10); */
@@ -311,6 +311,19 @@ path {
   .p{
     font-size: 2vh;
   }
+  .card-text {
+    font-size: 2vh;
+  }
+  .card-body {
+    display: grid;
+    max-width: 100vw;
+    /* margin-left: -15vw; */
+  }
+  .leftside {
+    /* display: grid; */
+    flex-basis: 100%;
+    /* margin-left: -15vw; */
+  }
   
   
   
@@ -344,6 +357,9 @@ path {
   .row3 {
     display: flex;
     margin: auto;
+  }
+  .card-body {
+    display: flex;
   }
   
   
@@ -403,7 +419,7 @@ path {
     
   }
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) and (min-width: 1000px) {
   .h1New {
     font-size: 9vw;
   }
@@ -434,6 +450,9 @@ path {
     src: url(./chocolate-dealer-font/ChocolatedealerBold-534x.otf);
 
   }
+  .card-body {
+    display: flex;
+  }
 
 
 }
@@ -449,7 +468,7 @@ ul {
 .card2 {
   outline: 1px solid black;
   padding: 2%;
-  background-color: rgba(81, 20, 30, 0.203)   ;
+  background-color: rgb(254, 0, 169)   ;
   width: 70%;
   height: 100%;
   /* margin-right: 20%; */
@@ -556,7 +575,7 @@ ul {
   background-size: 120vw;
   background-position: -11vw;
   background-position-y: -70vh;
-  background-color: black;
+  background-color: rgb(255, 0, 200);
   /* min-height: ; */
 
 }
@@ -594,7 +613,7 @@ ul {
   background-size: 120vw;
   background-position: -11vw;
   background-position-y: -70vh;
-  background-color: black;
+  background-color: rgb(153, 15, 158);
   
   /* padding-top: -2vw; */
 } 
@@ -646,9 +665,7 @@ ul {
   /* margin-block-start: 5vh; */
   /* padding: 5vw; */
 }
-.card-body {
-  display: flex;
-}
+
 .sphere {
   /* margin-left: -8vw; */
   /* margin-top: -10vh; */
