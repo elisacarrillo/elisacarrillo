@@ -39,8 +39,8 @@ const Blog = () => {
                     <div className='card' >
                         {/* <h2 >Title </h2> */}
                         <h2> {item.title}</h2>
-                        <p>{item.date}</p>
-                        <p>{item.content}</p>
+                        <p className="p">{item.date}</p>
+                        <p className="p">{item.content}</p>
 
 
                     </div>
