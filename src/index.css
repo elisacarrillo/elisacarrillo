@@ -144,7 +144,7 @@ code {
 .total {
   /* transform: translate(0vw, 0vh); *
   /* margin-left: 0vw; */
-  /* display: flex; */
+  display: flexbox;
   margin-left: 3vw;
   margin-top: -15vh;
   height: 100%;
@@ -317,6 +317,14 @@ path {
     font-size: 4.25vw;
     transform: translate(2vw, -30vh);
   }
+  .total {
+    display: flex;
+  
+  }
+  .row3 {
+    display: flex;
+    margin: auto;
+  }
   
   
 }
@@ -325,13 +333,33 @@ path {
     font-size: 4vw;
     transform: translate(2vw, -30vh);
   }
+  .total {
+    display: flex;
+  
+  }
+  .row3 {
+    display: flex;
+  }
   
   
 }
-@media screen and (max-width: 1400px) {
+@media screen and (min-width: 800px)and ( max-width: 1200px) {
   .tit {
-    font-size: 5vw;
+    font-size: 6vw;
+  }
+  
+}
+@media screen and (max-width: 1000px) {
+  .tit {
+    font-size: 8vw;
     transform: translate(2vw, -30vh);
+  }
+  .total {
+    display: flex;
+  
+  }
+  .row3 {
+    display: flex;
   }
   
   
@@ -351,7 +379,7 @@ path {
   margin-top: 10vh;
   margin-bottom: 15vh;
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 700px) {
   .tit {
     font-size: 7vw;
     transform: translate(2vw, -30vh);
@@ -360,9 +388,14 @@ path {
     margin: auto;
     margin-top: -10vh;
     margin-bottom: 13vh;
-    display: grid;
+    /* display: flex; */
     width: 100vw;
     margin-left: 20vw;
+  }
+  .total {
+    display: grid;
+    max-width: 80vw;
+    
   }
 }
 @media screen and (max-width: 1200px) {
@@ -453,6 +486,17 @@ ul {
 @media screen and (max-width: 600px) {
   .title {
     font-size: 2vw;
+  }
+  
+
+}
+
+@media screen and (max-width: 800px) {
+  .title {
+    font-size: 2vw;
+  }
+  .row3 {
+    display: grid;
   }
 
 }
@@ -629,7 +673,7 @@ ul {
   /* width: 80vw; */
   /* margin-left: 10vw; */
   /* padding-right: 2vw;   */
-  
+  /* display: flex; */
 
 }
 .row2 {
