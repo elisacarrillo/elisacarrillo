@@ -84,7 +84,7 @@ const Projects = () => {
                         <p class="card-text">Won First Place and Team MVP at VMWare Codehouse Hackathon</p>
                         </div>
                         <div className='rightside'>
-                        <a href="#" class="btn btn-light">Go somewhere</a>
+                        <a href="#" class="btn btn-light">Github Link</a>
                         
                         </div>
                     </div>
