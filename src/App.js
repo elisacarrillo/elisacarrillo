@@ -17,7 +17,7 @@ import React from 'react';
 import OracleOfArtists from './Components/Oracle-of-artists';
 
 function App() {
-  document.title = "My Website";
+  document.title = "Elisa Carrillo";
     async function handleResize() {
       console.log(window.innerWidth);
       console.log(window.innerHeight);

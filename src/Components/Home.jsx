@@ -139,6 +139,8 @@ const Home = () => {
  
       
       <div className='title'>
+        <span class="alt-text">The Queenellie Orbit</span>
+        <span class="full-span">
         <div className='tit' onClick={scroll} >
           {/* <h1 className='h1New'>./The Queenellie Orbit</h1> */}
         <svg  viewBox="0 0 600 600">
@@ -153,6 +155,7 @@ const Home = () => {
           </text>
           {/* </div> */}
         </svg>
+        
         {/* <h1 className = "hTitNew">Hi Im Elisa</h1> */}
         <div className='toType' >
         <TypeAnimation
@@ -187,6 +190,8 @@ const Home = () => {
     /> 
         </div>
         </div>
+        </span>
+
         
       {/* <TypeAnimation
       sequence={[
@@ -229,7 +234,7 @@ const Home = () => {
     <div className="row3">
           <div className="sphere" onClick={goToBlog}>
           <Canvas
-            style={{ height: 500, width: 500 }}
+            style={{ height: 400, width:200 }}
             camera={{ position: [0, 15, 15] }}
             text = "Hello"
             
@@ -242,7 +247,7 @@ const Home = () => {
           <div className="sphere" onClick={goToProjects}>
           
           <Canvas
-          style={{ height: 500, width: 500 }}
+          style={{ height: 400, width: 200 }}
           camera={{ position: [0, 15, 15] }}
           text = "Hello"
           
@@ -253,7 +258,7 @@ const Home = () => {
         </div>
         <div className='sphere' onClick={goToContact}>
         <Canvas
-        style={{ height: 500, width: 500 }}
+        style={{ height: 400, width: 200 }}
         camera={{ position: [0, 15, 15] }}
         text = "Hello"
       >
@@ -263,9 +268,10 @@ const Home = () => {
       </div>
       <div className='sphere' onClick={goToResume}>
       <Canvas
-            style={{ height: 500, width: 500 }}
+            style={{ height: 400, width: 200 }}
             camera={{ position: [0, 15, 15] }}
             text = "Hello"
+            
           >
             <pointLight position={[0, 10, 10]} />
             <SphereResume />
