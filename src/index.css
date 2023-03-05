@@ -328,17 +328,19 @@ path {
   
   
 }
-@media screen and (max-width: 1700px) {
+@media screen and (min-width: 1700px) {
   .tit {
     font-size: 4vw;
     transform: translate(2vw, -30vh);
   }
   .total {
     display: flex;
+    /* margin:auto; */
   
   }
   .row3 {
     display: flex;
+    margin: auto;
   }
   
   
